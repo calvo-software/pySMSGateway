@@ -91,22 +91,6 @@ The `Authorization: Bearer WEBHOOK_TOKEN` header is included if configured.
 
 ---
 
-## 🐳 Running via Docker
-
-```bash
-docker build -t pysmsgateway .
-docker run --rm -it \
-  -e GSM_DEVICE=/dev/ttyUSB0 \
-  -e GSM_CONNECTION=at115200 \
-  -e WEBHOOK_URL=https://your-service.example.com/sms \
-  -e WEBHOOK_TOKEN=your-secret-token \
-  --device=/dev/ttyUSB0 \
-  -p 3000:3000 \
-  pysmsgateway
-```
-
----
-
 ## 🛠️ Development
 
 ```bash
