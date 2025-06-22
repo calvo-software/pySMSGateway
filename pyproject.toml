@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pysmsgateway"
+version = "0.1.0"
+description = "Asynchronous SMS gateway using Gammu with RESTful API interface"
+readme = "README.md"
+license = "MIT"
+authors = [
+  { name = "Oscar Calvo", email = "oscar@calvonet.com" }
+]
+dependencies = [
+  "aiohttp>=3.8",
+  "python-gammu"
+]
+requires-python = ">=3.7"
+keywords = ["sms", "gammu", "async", "gateway", "REST", "modem"]
+license-files = ["LICENSE"]
+
+[project.scripts]
+pysmsgateway = "sms_gateway.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sms_gateway"]
+
